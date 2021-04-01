@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.ensemble import RandomForestClassifier
 
-def naive_classfication(data):
+def RDC_classfication(data):
     Y = data.status
     X = data.drop("status",axis='columns')
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.30, random_state=17)
@@ -18,7 +18,7 @@ def naive_classfication(data):
     ypredict = clf.predict(X_test)
     print( '\nTraining classification report\n', classification_report(y_test, ypredict))
     print("\n Confusion matrix of training \n", confusion_matrix(y_test, ypredict))
-
+    print(accuracy)
     return 0
 
 
