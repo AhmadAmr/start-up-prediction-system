@@ -16,7 +16,7 @@ def RDC_classfication(data):
     print('\nTraining classification report\n', classification_report(y_train, ypredict))
     print( "\n Confusion matrix of training \n", confusion_matrix(y_train, ypredict))
     ypredict = clf.predict(X_test)
-    print( '\nTraining classification report\n', classification_report(y_test, ypredict))
+    print( '\nTraining classification re    port\n', classification_report(y_test, ypredict))
     print("\n Confusion matrix of training \n", confusion_matrix(y_test, ypredict))
     print(accuracy)
     return 0
