@@ -9,7 +9,7 @@ def RDC_classfication(data):
     Y = data.status
     X = data.drop("status",axis='columns')
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.30, random_state=17)
-    clf = RandomForestClassifier(n_estimators=1)
+    clf = RandomForestClassifier(n_estimators=100)
     clf = clf.fit(X_train, y_train)
     accuracy = clf.score(X_train, y_train)
     ypredict = clf.predict(X_train)
